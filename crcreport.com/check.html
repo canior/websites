@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Criminal Record Check Report</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: BizPage
+    * Updated: Sep 18 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container-fluid">
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-11 d-flex align-items-center justify-content-between">
+                <h1 class="logo"><a href="index.html">CrcReport</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li>
+                            English
+                        </li>
+                    </ul>
+                </nav><!-- .navbar -->
+            </div>
+        </div>
+
+    </div>
+</header><!-- End Header -->
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Your employer has invited you to complete this background check, please fill the form below and
+                    the result will be sent to the employer in 15 mins.</h2>
+            </div>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="contact" class="section-bg">
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="container" data-aos="fade-up">
+                <h2>Personal Information</h2>
+                <div class="form">
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="subject" id="passcode" placeholder="Passcode"
+                               required>
+                        <small class="form-text text-muted"><b>Please enter your passcode, if you do not have one,
+                            please ask your employer</b></small>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <input type="password" name="passcode" class="form-control" id="firstName"
+                                   placeholder="First Name"
+                                   required>
+                            <small class="form-text text-muted">Please enter your first name (given name) only. This
+                                should match your government issued ID. Do not enter nicknames or initials in this
+                                section. If you do not have a first name enter a period ".".</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" name="name" class="form-control" id="lastName" placeholder="Last Name"
+                                   required>
+                            <small class="form-text text-muted">Please enter your last name. This can also be referred
+                                to as Family Name or Surname. Enter your legal last name only, as it appears on your
+                                government issued ID.</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="phone" id="email" placeholder="Email"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Telephone"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth"
+                               placeholder="Date of Birth"
+                               required>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" data-aos="fade-up">
+                <h2>Address Information</h2>
+                <div class="form">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" name="streetNumber" id="streetNumber"
+                                   placeholder="Street Number"
+                                   required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="streetName" id="streetName"
+                                   placeholder="Street Name"
+                                   required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" name="apt" id="apt"
+                                   placeholder="Apt/Unit"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" name="city" id="city"
+                                   placeholder="City"
+                                   required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <select class="form-control" id="province" required>
+                                <option selected>Province</option>
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="YT">Yukon</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" name="postalCode" id="postalCode"
+                                   placeholder="Postal Code"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" data-aos="fade-up">
+                <h2>Identity Verification</h2>
+                <div class="form">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <input type="file" class="form-control" name="streetNumber" id="identity"
+                                   placeholder="Your identity file"
+                                   required>
+                            <small class="form-text text-muted">You’ll need to ensure that you upload a clear and
+                                unobstructed photo of a valid and unexpired government issued ID, driver’s license, or
+                                passport.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <select class="form-control" id="status" name="status" required>
+                                <option>Your Status in Canada</option>
+                                <option value="citizen">Citizen</option>
+                                <option value="permanentResident">Permanent Resident</option>
+                                <option value="visitor">Visitor</option>
+                                <option value="workPermit">Work Permit Holder</option>
+                                <option value="studyPermit">Study Permit Holder</option>
+                                <option value="refugee">Refugee</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <small class="form-text text-muted">Please choose your immigrant status</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="password" class="form-control" name="sin" id="sin"
+                                   placeholder="Social Insurance Number (SIN)"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" data-aos="fade-up">
+                <div class="form">
+                    <p>
+                        CrcReport takes your privacy seriously and we use the ID you provide to verify who you are. We
+                        use a technology that processes encrypted photos of the ID to validate your identity. We keep
+                        your photos and associated personal information only during the process. They’re generally
+                        permanently deleted within 14 days of submission.
+                    </p>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="privacy">
+                        <label class="form-check-label" for="privacy">&nbsp; I agree to the privacy <a href="">policy</a>.</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            &copy;2023 Copyright <strong>CrcReport</strong>. All Rights Reserved
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+<!-- Uncomment below i you want to use a preloader -->
+<!-- <div id="preloader"></div> -->
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
