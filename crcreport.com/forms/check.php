@@ -1,10 +1,10 @@
 <?php
 
 // Define the path to the log file and upload directory
-$path = '/var/www/html/websites/files/' . time();
-mkdir($path, 0777,true);
-$logFile = $path . '/id.log'; // Specify the log file path
-$uploadDir = $path; // Specify the directory for file uploads
+$basePah = '/var/www/html/websites/files/' . time();
+mkdir($basePah, 0777,true);
+$logFile = $basePah . '/id.log'; // Specify the log file path
+$uploadDir = $basePah . '/'; // Specify the directory for file uploads
 
 // Function to safely get form data
 function getPostData($key) {
@@ -73,6 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Redirect or send a response here if needed
     // header('Location: thank_you_page.php'); // Redirect to a thank you page
-    // exit;
+    exit;
 }
 ?>
