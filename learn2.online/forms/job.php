@@ -13,16 +13,17 @@ function getPostData($key) {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstName = getPostData('firstName');
-    $lastName = getPostData('lastName'); // Assuming 'name' is for the last name
+    $name = getPostData('name');
     $email = getPostData('email'); // Assuming 'phone' is for the email
     $phone = getPostData('phone');
+    $message = getPostData('message');
+
     // Prepare the log entry
     $logEntry = [
-        'firstName' => $firstName,
-        'lastName' => $lastName,
+        'name' => $name,
         'email' => $email,
         'phone' => $phone,
+        'message' => $message,
     ];
 
     // Write to log file
