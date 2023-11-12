@@ -63,21 +63,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Move the file to the upload directory
         if (move_uploaded_file($tempName, $path)) {
-            echo "File uploaded successfully.";
+            header('Location: https://crcreport.com');
         } else {
-            echo "File upload failed.";
+            echo 'No file uploaded or file upload error.';
         }
     } else {
-        echo "No file uploaded or file upload error.";
-        http_response_code(403);
-        print_r(json_encode([]));
-        exit;
+        echo 'No file uploaded or file upload error.';
     }
 
     // Redirect or send a response here if needed
     // header('Location: thank_you_page.php'); // Redirect to a thank you page
-    http_response_code(200);
-    print_r(json_encode([]));
     exit;
 }
 ?>
