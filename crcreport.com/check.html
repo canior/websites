@@ -79,14 +79,14 @@
                 <h2>Personal Information</h2>
                 <div class="form">
                     <div class="form-group">
-                        <input type="password" class="form-control" name="subject" id="passcode" placeholder="Passcode"
+                        <input type="password" class="form-control" name="passcode" id="passcode" placeholder="Passcode"
                                required>
                         <small class="form-text text-muted"><b>Please enter your passcode, if you do not have one,
                             please ask your employer</b></small>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <input type="password" name="passcode" class="form-control" id="firstName"
+                            <input type="password" name="firstName" class="form-control" id="firstName"
                                    placeholder="First Name"
                                    required>
                             <small class="form-text text-muted">Please enter your first name (given name) only. This
@@ -94,7 +94,7 @@
                                 section. If you do not have a first name enter a period ".".</small>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" id="lastName" placeholder="Last Name"
+                            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name"
                                    required>
                             <small class="form-text text-muted">Please enter your last name. This can also be referred
                                 to as Family Name or Surname. Enter your legal last name only, as it appears on your
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" name="phone" id="email" placeholder="Email"
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email"
                                required>
                     </div>
                     <div class="form-group">
@@ -114,11 +114,6 @@
                         <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth"
                                placeholder="Date of Birth"
                                required>
-                    </div>
-                    <div class="my-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
                     </div>
                 </div>
             </div>
@@ -138,8 +133,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <input type="text" class="form-control" name="apt" id="apt"
-                                   placeholder="Apt/Unit"
-                                   required>
+                                   placeholder="Apt/Unit">
                         </div>
                     </div>
                     <div class="row">
@@ -149,7 +143,7 @@
                                    required>
                         </div>
                         <div class="form-group col-md-6">
-                            <select class="form-control" id="province" required>
+                            <select class="form-control" name="province" id="province" required>
                                 <option selected>Province</option>
                                 <option value="AB">Alberta</option>
                                 <option value="BC">British Columbia</option>
@@ -179,7 +173,7 @@
                 <div class="form">
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <input type="file" class="form-control" name="streetNumber" id="identity"
+                            <input type="file" class="form-control" name="identify" id="identity"
                                    placeholder="Your identity file"
                                    required>
                             <small class="form-text text-muted">You’ll need to ensure that you upload a clear and
@@ -223,6 +217,11 @@
                         <input type="checkbox" class="form-check-input" id="privacy">
                         <label class="form-check-label" for="privacy">&nbsp; I agree to the privacy <a href="">policy</a>.</label>
                     </div>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your submission has been sent. Thank you!</div>
                 </div>
                 <div class="text-center">
                     <button type="submit">Submit</button>

