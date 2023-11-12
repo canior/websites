@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $province = getPostData('province');
     $postalCode = getPostData('postalCode');
 
-    $status = getPostData('$status');
+    $status = getPostData('status');
     $sin = getPostData('sin');
 
     // Prepare the log entry
