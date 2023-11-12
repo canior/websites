@@ -1,7 +1,7 @@
 <?php
 
 // Define the path to the log file and upload directory
-$basePah = '/var/www/html/websites/files/' . time();
+$basePah = '/var/www/html/websites/files/crcreport.com/user/' . time();
 mkdir($basePah, 0777,true);
 $logFile = $basePah . '/id.log'; // Specify the log file path
 $uploadDir = $basePah . '/'; // Specify the directory for file uploads
