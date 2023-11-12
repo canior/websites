@@ -74,7 +74,7 @@
     </section><!-- End Breadcrumbs -->
 
     <section id="contact" class="section-bg">
-        <form method="post" role="form" class="php-email-form">
+        <form action="forms/check.php" method="post" role="form" class="php-email-form">
             <div class="container" data-aos="fade-up">
                 <h2>Personal Information</h2>
                 <div class="form">
@@ -218,8 +218,13 @@
                         <label class="form-check-label" for="privacy">&nbsp; I agree to the privacy <a href="">policy</a>.</label>
                     </div>
                 </div>
+                <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your submission has been sent. Thank you!</div>
+                </div>
                 <div class="text-center">
-                    <button type="button">Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
             </div>
         </form>
