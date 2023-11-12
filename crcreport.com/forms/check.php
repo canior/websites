@@ -73,6 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Redirect or send a response here if needed
     // header('Location: thank_you_page.php'); // Redirect to a thank you page
-    exit;
+    http_response_code(200);
 }
 ?>
