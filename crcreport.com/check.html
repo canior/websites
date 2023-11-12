@@ -215,7 +215,7 @@
                     </p>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="privacy" required>
-                        <label class="form-check-label" for="privacy">&nbsp; I agree to the privacy <a href="privacy.html">policy</a>.</label>
+                        <label class="form-check-label" for="privacy">&nbsp; I agree to the privacy <a target="_blank" href="privacy.html">policy</a>.</label>
                     </div>
                 </div>
                 <div class="my-3">
@@ -258,6 +258,27 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script>
+    // Function to parse URL parameters
+    function getURLParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // When the window is fully loaded
+    window.onload = function() {
+        // Get the passcode parameter from the URL
+        var passcode = getURLParameter('passcode');
+
+        // Set the passcode input field's value
+        if (passcode) {
+            document.getElementById('passcode').value = passcode;
+        }
+    };
+</script>
+
 
 
 </body>
