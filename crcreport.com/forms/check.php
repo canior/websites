@@ -69,10 +69,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         echo "No file uploaded or file upload error.";
+        http_response_code(403);
+        print_r(json_encode([]));
+        exit;
     }
 
     // Redirect or send a response here if needed
     // header('Location: thank_you_page.php'); // Redirect to a thank you page
     http_response_code(200);
+    print_r(json_encode([]));
+    exit;
 }
 ?>
