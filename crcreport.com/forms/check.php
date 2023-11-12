@@ -15,6 +15,18 @@ function getPostData($key) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Extract the data from the form
     $passcode = getPostData('passcode');
+
+    if (!in_array($passcode, [
+        '423544',
+        '456735',
+        '483442',
+        '456473',
+        '856457',
+    ])) {
+        echo 'Please input a valid passcode.';
+        exit;
+    }
+
     $firstName = getPostData('firstName');
     $lastName = getPostData('lastName'); // Assuming 'name' is for the last name
     $email = getPostData('email'); // Assuming 'phone' is for the email
@@ -33,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare the log entry
     $logEntry = [
+        'passcode' => $passcode,
         'firstName' => $firstName,
         'lastName' => $lastName,
         'email' => $email,
