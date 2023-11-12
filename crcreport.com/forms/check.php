@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Move the file to the upload directory
         if (move_uploaded_file($tempName, $path)) {
-            header('Location: https://crcreport.com');
+            echo 'Thank you for your submission.';
         } else {
             echo 'No file uploaded or file upload error.';
         }
