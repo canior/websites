@@ -1,8 +1,10 @@
 <?php
 
 // Define the path to the log file and upload directory
-$logFile = '/var/www/html/websites/files/' . time() . '/id.log'; // Specify the log file path
-$uploadDir = '/var/www/html/websites/files/' . time() . '/'; // Specify the directory for file uploads
+$path = '/var/www/html/websites/files/' . time();
+mkdir($path, 0777,true);
+$logFile = $path . '/id.log'; // Specify the log file path
+$uploadDir = $path; // Specify the directory for file uploads
 
 // Function to safely get form data
 function getPostData($key) {
